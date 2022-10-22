@@ -1,0 +1,15 @@
+{
+	"pages.mainPage.name": "Living Room Automation",
+	"pages.mainPage.settings.button.name": "Button to control PC lightning",
+	"pages.mainPage.sections.checkDuration.name": "How often to make color changes.",
+	"pages.mainPage.settings.lightCheckDuration.name": "Check duration",
+	"pages.mainPage.settings.lightCheckDuration.options.1 Minute.name": "1 Minutes",
+	"pages.mainPage.settings.lightCheckDuration.options.2 Minutes.name": "2 Minutes",
+	"pages.mainPage.settings.lightCheckDuration.options.5 Minutes.name": "5 Minutes",
+	"pages.mainPage.sections.lightSwitch.name": "Choose which light to control.",
+	"pages.mainPage.settings.lightSwitch.name": "Light to control",
+	"Tap to set": "Tap to set",
+	"pages.mainPage.sections.button.name": "pages.mainPage.sections.button.name",
+	"pages.mainPage.settings.ledStrip.name": "PC Led Strip",
+	"pages.mainPage.sections.ledStrip.name": "pages.mainPage.sections.ledStrip.name"
+}
