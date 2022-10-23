@@ -25,6 +25,7 @@ module.exports = new SmartApp()
         });
     })
 
+
     .updated(async (context, updateData) => {
         // Updated defines what code to run when the SmartApp is installed or the settings are updated by the user.
 
@@ -36,8 +37,21 @@ module.exports = new SmartApp()
         await context.api.subscriptions.subscribeToDevices(context.config.PcLedStrip, 'switch', 'switch', 'pcLedStripSwitchHandler')
         await context.api.subscriptions.subscribeToDevices(context.config.PcLedStrip, 'colorControl', 'hue', 'pcLedStripHueHandler')
 
+        //---Scheduled taskss------------------------------------------
+        await context.api.schedules.schedule(
+            'periodicScheduler',
+            `0/7 * * * ? *`,
+            'UTC'
+        )
     })
 
+
+    //---SHCEDULER DEFINITION---
+    .scheduledEventHandler('periodicScheduler', async (context, event) => {
+        await context.api.devices.getCapabilityStatus(context.config.PcLedStrip[0].deviceConfig.deviceId, 'main', 'colorControl')
+    })
+
+    //---EVENT HANDLERS DEFINITIONS---
     .subscribedEventHandler('pcLedStripHueHandler', async (context, event) => {
         stripStatus = await context.api.devices.getCapabilityStatus(context.config.PcLedStrip[0].deviceConfig.deviceId, 'main', 'colorControl')
         satValue = stripStatus.saturation.value
