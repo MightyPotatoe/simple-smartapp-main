@@ -12,5 +12,26 @@
 	"pages.mainPage.sections.PcLedStrip.name": "PC Led Strip",
 	"pages.mainPage.settings.PcLedStrip.name": "PC Led Strip",
 	"pages.mainPage.sections.PcRgbLight.name": "PC RGB Light",
-	"pages.mainPage.settings.PcRgbLight.name": "PC RGB Light"
+	"pages.mainPage.settings.PcRgbLight.name": "PC RGB Light",
+
+	"pages.mainPage.sections.LivingRoomCeilingLedStrip.name": "LivingRoom Ceiling Led Strip",
+	"pages.mainPage.settings.LivingRoomCeilingLedStrip.name": "LivingRoom Ceiling Led Strip",
+
+	"pages.mainPage.sections.LivingRoomCeilingRgbLed1.name": "LivingRoom Ceiling RGB Light1",
+	"pages.mainPage.settings.LivingRoomCeilingRgbLed1.name": "LivingRoom Ceiling RGB Light1",
+
+	"pages.mainPage.sections.LivingRoomCeilingRgbLed2.name": "LivingRoom Ceiling RGB Light2",
+	"pages.mainPage.settings.LivingRoomCeilingRgbLed2.name": "LivingRoom Ceiling RGB Light2",
+
+	"pages.mainPage.sections.LivingRoomCeilingRgbLed3.name": "LivingRoom Ceiling RGB Light3",
+	"pages.mainPage.settings.LivingRoomCeilingRgbLed3.name": "LivingRoom Ceiling RGB Light3",
+
+	"pages.mainPage.sections.LivingRoomCeilingRgbLed4.name": "LivingRoom Ceiling RGB Light4",
+	"pages.mainPage.settings.LivingRoomCeilingRgbLed4.name": "LivingRoom Ceiling RGB Light4",
+
+	"pages.mainPage.sections.LivingRoomCeilingRgbLed5.name": "LivingRoom Ceiling RGB Light5",
+	"pages.mainPage.settings.LivingRoomCeilingRgbLed5.name": "LivingRoom Ceiling RGB Light5",
+
+	"pages.mainPage.sections.LivingRoomCeilingRgbLed6.name": "LivingRoom Ceiling RGB Light6",
+	"pages.mainPage.settings.LivingRoomCeilingRgbLed6.name": "LivingRoom Ceiling RGB Light6"
 }

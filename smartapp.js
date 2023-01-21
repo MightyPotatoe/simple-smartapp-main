@@ -130,6 +130,52 @@ module.exports = new SmartApp()
         }
     })
 
+    .subscribedEventHandler('LivingRoomCeilingLedStripHueHandler', async (context, event) => {
+        stripStatus = await context.api.devices.getCapabilityStatus(context.config.LivingRoomCeilingLedStrip[0].deviceConfig.deviceId, 'main', 'colorControl')
+        satValue = stripStatus.saturation.value
+        hueValue = stripStatus.hue.value
+        if (satValue !== 0) {
+            //Setting hue to RGB Lights
+            changeColor(context, context.config.LivingRoomCeilingRgbLed1, satValue, hueValue)
+            changeColor(context, context.config.LivingRoomCeilingRgbLed2, satValue, hueValue)
+            changeColor(context, context.config.LivingRoomCeilingRgbLed3, satValue, hueValue)
+            changeColor(context, context.config.LivingRoomCeilingRgbLed4, satValue, hueValue)
+            changeColor(context, context.config.LivingRoomCeilingRgbLed5, satValue, hueValue)
+            changeColor(context, context.config.LivingRoomCeilingRgbLed6, satValue, hueValue)
+        } else {
+            //Setting color temp
+            changeColorTemp(context, context.config.LivingRoomCeilingRgbLed1, satValue, hueValue)
+            changeColorTemp(context, context.config.LivingRoomCeilingRgbLed2, satValue, hueValue)
+            changeColorTemp(context, context.config.LivingRoomCeilingRgbLed3, satValue, hueValue)
+            changeColorTemp(context, context.config.LivingRoomCeilingRgbLed4, satValue, hueValue)
+            changeColorTemp(context, context.config.LivingRoomCeilingRgbLed5, satValue, hueValue)
+            changeColorTemp(context, context.config.LivingRoomCeilingRgbLed6, satValue, hueValue)
+        }
+    })
+
+    .subscribedEventHandler('LivingRoomCeilingLedStripSwitchHandler', async (context, event) => {
+        if(event.value === 'on'){
+            context.api.devices.sendCommands(context.config.LivingRoomCeilingRgbLed1, 'switch', 'on')
+            context.api.devices.sendCommands(context.config.LivingRoomCeilingRgbLed2, 'switch', 'on')
+            context.api.devices.sendCommands(context.config.LivingRoomCeilingRgbLed3, 'switch', 'on')
+            context.api.devices.sendCommands(context.config.LivingRoomCeilingRgbLed4, 'switch', 'on')
+            context.api.devices.sendCommands(context.config.LivingRoomCeilingRgbLed5, 'switch', 'on')
+            context.api.devices.sendCommands(context.config.LivingRoomCeilingRgbLed6, 'switch', 'on')
+        }
+        else {
+            context.api.devices.sendCommands(context.config.LivingRoomCeilingRgbLed1, 'switch', 'off')
+            context.api.devices.sendCommands(context.config.LivingRoomCeilingRgbLed2, 'switch', 'on')
+            context.api.devices.sendCommands(context.config.LivingRoomCeilingRgbLed3, 'switch', 'on')
+            context.api.devices.sendCommands(context.config.LivingRoomCeilingRgbLed4, 'switch', 'on')
+            context.api.devices.sendCommands(context.config.LivingRoomCeilingRgbLed5, 'switch', 'on')
+            context.api.devices.sendCommands(context.config.LivingRoomCeilingRgbLed6, 'switch', 'on')
+        }
+    })
+
+
+
+
+
 async function changeColor(context, device, saturation, hue) {
     // Send command to the SmartThings API.
     await context.api.devices.sendCommands(device, [
