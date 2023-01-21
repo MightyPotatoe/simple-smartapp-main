@@ -93,7 +93,7 @@ module.exports = new SmartApp()
         await context.api.subscriptions.subscribeToDevices(context.config.PcLedStrip, 'switch', 'switch', 'pcLedStripSwitchHandler')
         await context.api.subscriptions.subscribeToDevices(context.config.PcLedStrip, 'colorControl', 'hue', 'pcLedStripHueHandler')
         await context.api.subscriptions.subscribeToDevices(context.config.LivingRoomCeilingLedStrip, 'switch', 'switch', 'LRStripSwitchHandler')
-        await context.api.subscriptions.subscribeToDevices(context.config.LivingRoomCeilingLedStrip, 'colorControl', 'hue', 'LRStripHueHandler')
+        // await context.api.subscriptions.subscribeToDevices(context.config.LivingRoomCeilingLedStrip, 'colorControl', 'hue', 'LRStripHueHandler')
 
 
         //---Scheduled taskss------------------------------------------
