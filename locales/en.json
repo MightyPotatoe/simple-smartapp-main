@@ -9,8 +9,11 @@
 	"pages.mainPage.sections.lightSwitch.name": "Choose which light to control.",
 	"pages.mainPage.settings.lightSwitch.name": "Light to control",
 	"Tap to set": "Tap to set",
+
+
 	"pages.mainPage.sections.PcLedStrip.name": "PC Led Strip",
 	"pages.mainPage.settings.PcLedStrip.name": "PC Led Strip",
+
 	"pages.mainPage.sections.PcRgbLight.name": "PC RGB Light",
 	"pages.mainPage.settings.PcRgbLight.name": "PC RGB Light",
 
