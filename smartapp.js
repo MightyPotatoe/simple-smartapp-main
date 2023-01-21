@@ -23,6 +23,62 @@ module.exports = new SmartApp()
                 .permissions('rx')
                 .required(true);
         });
+
+        page.section('LivingRoomCeilingLedStrip', section => {
+            section
+                .deviceSetting('LivingRoomCeilingLedStrip')
+                .capabilities(['colorControl', 'switch'])
+                .permissions('rx')
+                .required(true);
+        });
+
+        page.section('LivingRoomCeilingRgbLed1', section => {
+            section
+                .deviceSetting('LivingRoomCeilingRgbLed1')
+                .capabilities(['colorControl', 'switch'])
+                .permissions('rx')
+                .required(true);
+        });
+
+        page.section('LivingRoomCeilingRgbLed2', section => {
+            section
+                .deviceSetting('LivingRoomCeilingRgbLed3')
+                .capabilities(['colorControl', 'switch'])
+                .permissions('rx')
+                .required(true);
+        });
+
+        page.section('LivingRoomCeilingRgbLed3', section => {
+            section
+                .deviceSetting('LivingRoomCeilingRgbLed3')
+                .capabilities(['colorControl', 'switch'])
+                .permissions('rx')
+                .required(true);
+        });
+
+        page.section('LivingRoomCeilingRgbLed4', section => {
+            section
+                .deviceSetting('LivingRoomCeilingRgbLed4')
+                .capabilities(['colorControl', 'switch'])
+                .permissions('rx')
+                .required(true);
+        });
+
+        page.section('LivingRoomCeilingRgbLed5', section => {
+            section
+                .deviceSetting('LivingRoomCeilingRgbLed5')
+                .capabilities(['colorControl', 'switch'])
+                .permissions('rx')
+                .required(true);
+        });
+
+        page.section('LivingRoomCeilingRgbLed6', section => {
+            section
+                .deviceSetting('LivingRoomCeilingRgbLed6')
+                .capabilities(['colorControl', 'switch'])
+                .permissions('rx')
+                .required(true);
+        });
     })
 
 
