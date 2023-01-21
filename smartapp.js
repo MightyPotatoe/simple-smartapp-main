@@ -92,7 +92,7 @@ module.exports = new SmartApp()
         //Subscribe to events
         await context.api.subscriptions.subscribeToDevices(context.config.PcLedStrip, 'switch', 'switch', 'pcLedStripSwitchHandler')
         await context.api.subscriptions.subscribeToDevices(context.config.PcLedStrip, 'colorControl', 'hue', 'pcLedStripHueHandler')
-        await context.api.subscriptions.subscribeToDevices(context.config.LivingRoomCeilingLedStrip, 'switch', 'switch', 'xxx')
+        await context.api.subscriptions.subscribeToDevices(context.config.LivingRoomCeilingLedStrip, 'switch', 'switch', 'LRStripSwitchHandler')
 
 
         //---Scheduled taskss------------------------------------------
@@ -155,7 +155,7 @@ module.exports = new SmartApp()
         }
     })
 
-    .subscribedEventHandler('LivingRoomCeilingLedStripSwitchHandler', async (context, event) => {
+    .subscribedEventHandler('LRStripSwitchHandler', async (context, event) => {
         if(event.value === 'on'){
             context.api.devices.sendCommands(context.config.LivingRoomCeilingRgbLed1, 'switch', 'on')
             context.api.devices.sendCommands(context.config.LivingRoomCeilingRgbLed2, 'switch', 'on')
