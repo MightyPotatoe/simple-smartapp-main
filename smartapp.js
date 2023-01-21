@@ -21,7 +21,7 @@ module.exports = new SmartApp()
                 .deviceSetting('PcRgbLight')
                 .capabilities(['colorControl', 'switch'])
                 .permissions('rx')
-                .required(true);
+                .required(false);
         });
 
         page.section('LivingRoomCeilingLedStrip', section => {
@@ -37,7 +37,7 @@ module.exports = new SmartApp()
                 .deviceSetting('LivingRoomCeilingRgbLed1')
                 .capabilities(['colorControl', 'switch'])
                 .permissions('rx')
-                .required(true);
+                .required(false);
         });
 
         page.section('LivingRoomCeilingRgbLed2', section => {
@@ -45,7 +45,7 @@ module.exports = new SmartApp()
                 .deviceSetting('LivingRoomCeilingRgbLed2')
                 .capabilities(['colorControl', 'switch'])
                 .permissions('rx')
-                .required(true);
+                .required(false);
         });
 
         page.section('LivingRoomCeilingRgbLed3', section => {
@@ -53,7 +53,7 @@ module.exports = new SmartApp()
                 .deviceSetting('LivingRoomCeilingRgbLed3')
                 .capabilities(['colorControl', 'switch'])
                 .permissions('rx')
-                .required(true);
+                .required(false);
         });
 
         page.section('LivingRoomCeilingRgbLed4', section => {
@@ -61,7 +61,7 @@ module.exports = new SmartApp()
                 .deviceSetting('LivingRoomCeilingRgbLed4')
                 .capabilities(['colorControl', 'switch'])
                 .permissions('rx')
-                .required(true);
+                .required(false);
         });
 
         page.section('LivingRoomCeilingRgbLed5', section => {
@@ -69,7 +69,7 @@ module.exports = new SmartApp()
                 .deviceSetting('LivingRoomCeilingRgbLed5')
                 .capabilities(['colorControl', 'switch'])
                 .permissions('rx')
-                .required(true);
+                .required(false);
         });
 
         page.section('LivingRoomCeilingRgbLed6', section => {
@@ -77,7 +77,7 @@ module.exports = new SmartApp()
                 .deviceSetting('LivingRoomCeilingRgbLed6')
                 .capabilities(['colorControl', 'switch'])
                 .permissions('rx')
-                .required(true);
+                .required(false);
         });
     })
 
@@ -166,11 +166,11 @@ module.exports = new SmartApp()
         }
         else {
             context.api.devices.sendCommands(context.config.LivingRoomCeilingRgbLed1, 'switch', 'off')
-            context.api.devices.sendCommands(context.config.LivingRoomCeilingRgbLed2, 'switch', 'on')
-            context.api.devices.sendCommands(context.config.LivingRoomCeilingRgbLed3, 'switch', 'on')
-            context.api.devices.sendCommands(context.config.LivingRoomCeilingRgbLed4, 'switch', 'on')
-            context.api.devices.sendCommands(context.config.LivingRoomCeilingRgbLed5, 'switch', 'on')
-            context.api.devices.sendCommands(context.config.LivingRoomCeilingRgbLed6, 'switch', 'on')
+            context.api.devices.sendCommands(context.config.LivingRoomCeilingRgbLed2, 'switch', 'off')
+            context.api.devices.sendCommands(context.config.LivingRoomCeilingRgbLed3, 'switch', 'off')
+            context.api.devices.sendCommands(context.config.LivingRoomCeilingRgbLed4, 'switch', 'off')
+            context.api.devices.sendCommands(context.config.LivingRoomCeilingRgbLed5, 'switch', 'off')
+            context.api.devices.sendCommands(context.config.LivingRoomCeilingRgbLed6, 'switch', 'off')
         }
     })
 
